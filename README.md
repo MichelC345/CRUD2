@@ -6,7 +6,7 @@ Roteiro:
 1 - Revisão de ações básicas no github, como update de arquivo, atualização de
 repositório;
 
-2 - Criação da tela de login em HTML;
+2 - Criação da tela de login (index) em HTML;
 
 3 - Criação da tela de cadastro em HTML;
 
