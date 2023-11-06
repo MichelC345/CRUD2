@@ -1,0 +1,83 @@
+<!--Michel 31/10/2023-->
+<!--Tela de cadastro do CRUD2-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="estilo.css">
+
+        <title>CRUD2 - Cadastro</title>
+    </head>
+
+    <body>
+
+
+        <form action="" method="POST" class = "cadastro-container">
+
+            <ul>
+                <% if (typeof errors != 'undefined') { %> <% errors.forEach(error=>{ %>
+                <li><%= error.message %></li>
+                <% }) %> <% } %>
+            </ul>
+
+            <h2 class = "login-titulo">Tela de Cadastro</h2>
+
+            <div class = "label-type1">
+                <label for="cad-login" placeholder="Digite seu usuário">Usuário:</label>
+                <input type="text" class="input" id="user" name="user" required>
+            </div>
+
+            <div class = "label-type1">
+                <label for="pass" placeholder="Digite sua senha">Senha:</label>
+                <input type="password" class="input" id="pass" name="pass" required>
+            </div>
+
+            <div class = "label-type1">
+                <label for="pass2" placeholder="Digite sua senha">Confirmar Senha:</label>
+                <input type="password" class="input" id="pass2" name="pass2" required>
+            </div>
+
+            <div class = "label-type1">
+                <label for="cad-tele" placeholder="Digite seu telefone">Telefone:</label>
+                <input type="text" class="input" id="phone" name="phone" required>
+            </div>
+
+            <div class="label-type1">
+                <label for="cad-born">Data de Nascimento:</label>
+                <input type="date" class="input" id="date" name="date" required>
+            </div>
+            
+            <!-- <div class="label-type1">
+                <h4>Preferências:</h4>
+                <div class="lista-opcoes">
+                    <div class="cad-opc-div">
+                        <input type="checkbox">Programação
+                        <input type="checkbox">Jogos
+                    </div>
+                    <div class="cad-opc-div">
+                        <input type="checkbox">Saúde
+                        <input type="checkbox">Esporte
+                    </div>
+                    <div class="cad-opc-div">
+                        <input type="checkbox">Leitura
+                        <input type="checkbox">Política
+                    </div>
+                    <div class="cad-opc-div">
+                        <input type="checkbox">Filmes e Séries
+                    </div>
+                </div>
+            </div> -->
+            
+            <div class = "label-type2">
+                <button id="cadastrar-button" class ="button-type1" type="submit">Cadastrar-se</button>
+            </div>
+
+            <div class = "label-type1">
+                <a href="/">Retornar à tela inicial</a>
+            </div>
+        </form>
+    </body>
+</html>

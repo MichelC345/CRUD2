@@ -1,0 +1,52 @@
+<!--Michel 31/10/2023-->
+<!--Tela inicial do CRUD2-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="estilo.css">
+
+        <title>CRUD2 - Login</title>
+
+    </head>
+
+    <body>
+        <form action ="/" method="POST" class = "login-container">
+            <ul>
+                <% if(messages.success_msg)  {%>
+                <li><%= messages.success_msg %></li>
+                <% } %>
+            </ul>
+            
+            <ul>
+                <% if(messages.error)  {%>
+                <li><%= messages.error %></li>
+                <% } %>
+            </ul>
+
+            <h2 class = "login-titulo">Tela Inicial</h2>
+            <div class = "label-type1">
+                <label for="login-input" placeholder="Digite seu usuário">Usuário:</label>
+                <input type="text" class="input" name="user" required>
+            </div>
+
+            <div class = "label-type1">
+                <label for="senha-input" placeholder="Digite sua senha">Senha:</label>
+                <input type="password" class="input" name="pass" required>
+            </div>
+
+            <div class = "label-type1">
+                <button type="submit" id="cadastrar-button" class ="button-type2">Logar</button>
+            </div>
+
+            <div class = "label-type1">
+                <label for="cadastrar-button" class="cadastrar-label">Não possui uma conta?</label>
+                <a href="./cadastro">Fazer Cadastro</a>
+            </div>
+        </form>
+    
+    </body>
+</html>

@@ -1,20 +1,24 @@
 # CRUD2
 Atividade home office para a BIT - Processo Seletivo 2023.
 
-Roteiro:
+Ferramentas e pacotes utilizados: node.js, express, bcrypt, postgreSQL, ejs, nodemon e moment.
 
-1 - Revisão de ações básicas no github, como update de arquivo, atualização de
-repositório;
+Materiais de relevância:
+https://www.youtube.com/watch?v=vxu1RrR0vbw&ab_channel=ConorBailey
+https://stackoverflow.com/questions/18629327/adding-css-file-to-ejs
+https://stackoverflow.com/questions/72336177/error-reqlogout-requires-a-callback-function
 
-2 - Criação da tela de login em HTML;
+Tendo o Node.js instalado, todos os pacotes necessários foram instalados no diretório com os comandos:
+npm init -y
+npm i express
+npm i -D nodemon
+npm i ejs
+npm i dotenv
+npm i pg
+npm i bcrypt
+npm i express-session express-flash
+npm i passport passport-local
+npm i moment
 
-3 - Criação da tela de cadastro em HTML;
-
-4 - Criação da tela de menu principal em HTML;
-
-5 - Fazer um back-end básico com JS e PostgreSQL;
-	* Operações de autenticação, inserção, exclusão, etc.
-
-6 - Estilizar com CSS;
-
-7 - Testes.
+Tendo a aplicação completa em um diretório, o comando "npm run dev" pode ser inserido
+naquele diretório, e a aplicação estará em funcionamento no domínio "localhost:4000".

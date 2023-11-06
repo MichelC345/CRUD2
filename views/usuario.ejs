@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="estilo.css">
+
+        <title>CRUD2 - Tela do Usuário</title>
+        <script src="func_basicas.js"></script>
+
+    </head>
+
+    <body id="tela-usuario">
+        
+        <span class="overlay"></span>
+
+        <div class="usuario-container" id="usuario-container">
+            <ul>
+                <% if(messages.error)  {%>
+                <li><%= messages.error %></li>
+                <% } %>
+            </ul>
+
+            <h2 class="login-titulo">Olá, <%= user %>!</h2>
+
+            <div class="label-type1">
+                <button class="button-type1" onclick="showppinfo1()">
+                    Consultar minhas informações
+                </button>
+            </div>
+
+            <div class="label-type1">
+                <button class="button-type1" onclick="showppinfo2()">
+                    Excluir a minha conta
+                </button>
+            </div>
+            
+            <div class="label-type1">
+                <a href="./logout">Encerrar Sessão</a>
+            </div>
+        </div>
+
+        <div class="popup-type1" id="popup1">
+            <span class="closepp-type1" onclick="closeppinfo1()">&times;</span>
+            <h2 class="login-titulo">Suas Informações:</h2>
+            <h4>
+                Usuário(a): <%= user %> <br>
+                Telefone: <%= phone %> <br>
+                Data de Nascimento: <%= date %>
+            </h4>
+        </div>
+
+        <div class="popup-type1" id="popup2">
+            <span class="closepp-type1" onclick="closeppinfo2()">&times;</span>
+            <h2>Esta ação exige confirmação. Digite a sua senha abaixo.</h2>
+            <form action="" method="POST">
+
+                <input type="password" name="passdel" placeholder="Senha">
+                <div class="label-type1">
+                    <button type="submit" class="button-type2">Excluir Conta</button>
+                </div>
+            </form>
+        </div>
+
+        
+    </body>
+
+    <script>
+        function showppinfo1 () {
+            popup = document.getElementById("popup1");
+            tela = document.getElementById("tela-usuario");
+            container = document.getElementById("usuario-container");
+            container.style.visibility = "hidden";
+            popup.style.display = "block"
+        }
+        
+        function showppinfo2 () {
+            popup = document.getElementById("popup2");
+            tela = document.getElementById("tela-usuario");
+            container = document.getElementById("usuario-container");
+            container.style.visibility = "hidden";
+            popup.style.display = "block"
+        }
+
+        function closeppinfo1 () {
+            popup = document.getElementById("popup1");
+            tela = document.getElementById("tela-usuario");
+            container = document.getElementById("usuario-container");
+
+            popup.style.display = "none";
+            tela.style.backgroundColor = "gray";
+            container.style.visibility = "visible";
+        }
+
+        function closeppinfo2 () {
+            popup = document.getElementById("popup2");
+            tela = document.getElementById("tela-usuario");
+            container = document.getElementById("usuario-container");
+
+            popup.style.display = "none";
+            tela.style.backgroundColor = "gray";
+            container.style.visibility = "visible";
+        }
+    </script>
+</html>
